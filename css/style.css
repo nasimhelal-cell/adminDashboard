@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* colors  */
+    --clr-primary: #1E2BE4;
+    --clr-danger: #DB3737;
+
+    --clr-mute-text: #5f6c8f;
+    --clr-strong-text: #2c303d;
+
+    --bg-clr-body: #F1F1F1;
+    /* font sizes  */
+    --fs-strong-text: 1.8rem;
+    --fs-logo-text: 1.45rem;
+    --fs-small-strong-text: 1rem;
+    --fs-extra-small-text: .8rem;
+
+    --fs-menu-items: .9rem;
+    /* font-family  */
+    --ff: 'Poppins', sans-serif;
+    /* trasition */
+    --transition:all .3s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--bg-clr-body);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================default css================ */
+main {
+    width: 96%;
+    margin-inline: auto;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    padding: 1.2em 0;
+    grid-template-columns: 14vw auto 20vw;
+}
+
+/* ===================left sidebar css=============== */
+.left_sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    border-right: 1px solid;
+}
+
+.left_sidebar a:first-child {
+    margin-bottom: 2em;
+}
+
+.left_sidebar a:last-child {
+    margin-top: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .6em
+}
+
+.logo img {
+    width: 2em;
+}
+.logo h3{
+    font-size: var(--fs-logo-text);
+    color: var(--clr-strong-text);
+    text-transform: uppercase;
+}
+.logo span {
+    color: var(--clr-danger);
+}
+
+.dashboard-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: .7em 1.5em;
+    color: var(--clr-mute-text);
+    font-size: var(--fs-menu-items);
+    transition: var(--transition);
+    border-left: 3px solid rgba(30, 43, 228,0);
+    font-weight: 500;
+}
+.dashboard-menu-item:hover{
+    color: var(--clr-primary); 
+    border-color: rgba(30, 43, 228,1);
+    background-color: rgba(30, 43, 228,.1);
+}
+.dashboard-menu-item span{
+    text-transform: capitalize;
+}
